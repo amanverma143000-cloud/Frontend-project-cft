@@ -1,0 +1,156 @@
+/* GLOBAL */
+body {
+  background: #e6ecf1;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* APP WRAPPER */
+.app {
+  padding: 40px 0;   /* left-right padding removed */
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+
+  border-radius: 0;      /* square */
+  border: none;
+  box-shadow: none;      /* remove side lines */
+
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* TITLE */
+.card h3 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.card p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* DATE */
+.card small {
+  display: block;
+  margin: 10px 0;
+  color: #b0b0b0;
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0;
+  background: #ccc;
+}
+
+/* CLOSE BUTTON */
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* PAGINATION */
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* CIRCLE BUTTONS */
+.pagination button {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.pagination button:hover {
+  background: #ccc;
+}
+
+/* ACTIVE BUTTON */
+.pagination .active {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 📱 TABLET */
+@media (max-width: 900px) {
+  .app {
+    padding: 30px 0;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 500px) {
+  .app {
+    padding: 20px 0;
+  }
+
+  .grid {
+    padding: 0 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .pagination button {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
