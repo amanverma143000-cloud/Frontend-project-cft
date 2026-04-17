@@ -85,7 +85,7 @@ body {
   text-align: center;
 }
 
-/* CIRCLE BUTTONS */
+/* CIRCLE BUTTONS - 1 2 3 style as defined in image */
 .pagination button {
   width: 40px;
   height: 40px;
@@ -109,10 +109,30 @@ body {
   background: #ccc;
 }
 
-/* ACTIVE BUTTON */
+/* ACTIVE BUTTON - highlights the current page (1, 2, or 3) */
 .pagination .active {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* LAST 3 BUTTON - circle style matching 1 2 3 buttons */
+.pagination .last-three-btn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.pagination .last-three-btn:hover {
+  background: #ccc;
 }
 
 /* 📱 TABLET */
@@ -148,7 +168,9 @@ body {
     height: 120px;
   }
 
-  .pagination button {
+  /* Mobile circle buttons - 1 2 3 style */
+  .pagination button,
+  .pagination .last-three-btn {
     width: 35px;
     height: 35px;
     font-size: 12px;
